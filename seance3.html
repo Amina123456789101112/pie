@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Télécharger</title>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+     const savedFavicon = localStorage.getItem('savedFavicon');
+     if (savedFavicon) {
+         let faviconElement = document.querySelector('link[rel="icon"]');
+         if (!faviconElement) {
+             faviconElement = document.createElement('link');
+             faviconElement.rel = 'icon';
+             document.head.appendChild(faviconElement);
+         }
+         faviconElement.href = savedFavicon;
+     }
+ });
+     </script>
+    <style>
+        .foter{
+    background-color: rgb(213 213 211 / 58%);
+    color: #212322;
+    text-decoration: underline;
+    padding-top: 35px;
+    font-size: 25px;
+    margin-top: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 30px;
+}
+        img {
+            width: 70%;
+           
+           
+            border-radius: 50%;
+        }
+        body {
+            background-color: #fffde7;
+            height: 100vh; /* Fait en sorte que le body occupe toute la hauteur de l'écran */
+            margin: 0; /* Supprime les marges par défaut */
+            display: flex;
+            justify-content: center; /* Centre horizontalement */
+            align-items: center; /* Centre verticalement */
+        }
+
+        .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    background-color: #efefef;
+border: solid 1px;
+    height: fit-content;
+    
+}
+
+button{
+    border: none;
+    border-right: solid 1px;
+   
+}
+        
+
+        p {
+            font-weight: bold;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="position: absolute; top: 10px; color: #6f5e5e; text-align: center;">Télécharger le Cours de séance 3</h1>
+    <div class="container">
+        <button  onclick="downloadAndClose('seance 3.pdf');">
+            <img src="b1.png" alt="">
+            <p style="color: #c94d4f;">Télécharger sous forme de PDF</p>
+        </button>
+        <button onclick="downloadAndClose('seance 3.pptx');">
+            <img src="b2.png" alt="">
+            <p style="color: #eb6f39;">Télécharger sous forme de Powerpoint</p>
+        </button>
+        <button onclick="downloadAndClose('seance 3.docx');">
+            <img src="b3.png" alt="">
+            <p style="color: #1896e2;">Télécharger sous forme de Word</p>
+        </button>
+    </div>
+    <footer style="position: absolute; bottom: 0px; width: 100%;"><div class="foter">@site créé par Amina Tourrisse</div></footer>
+
+
+    <script>
+       
+
+
+       function downloadAndClose(fileUrl) {
+            window.location.href = fileUrl; // فتح رابط الملف
+            setTimeout(() => {
+                window.close(); // إغلاق الصفحة بعد تأخير بسيط
+            }, 20000); // يمكنك ضبط التأخير حسب الحاجة
+        }
+        
+   </script>
+</body>
+</html>
