@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+    const savedFavicon = localStorage.getItem('savedFavicon');
+    if (savedFavicon) {
+        let faviconElement = document.querySelector('link[rel="icon"]');
+        if (!faviconElement) {
+            faviconElement = document.createElement('link');
+            faviconElement.rel = 'icon';
+            document.head.appendChild(faviconElement);
+        }
+        faviconElement.href = savedFavicon;
+    }
+});
+    </script>
+
+
+
+
+</head>
+<body>
+    <h1 id="videoTitle">Synthèse de Séance 2</h1>
+    
+ 
+
+
+
+    <video id="newVideo" controls autoplay>
+        <source id="videoSource" src="20.mp4" type="video/mp4">
+    </video>
+
+    <p id="videoDescription" ><img src="profil2.png" ><u> réalise par </u> :Mohammed Reffass et Abde sselam chbadi </p>
+    <h1 id="Title" >Cours de séance 2</h1>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-12 col-md-5"><img src="a1.png" ><b>    <u>Cours :</u></b><br><br>Culture Entrepreneuriale Management De Projet Et Séminaires Professionnels <br> <br> <br><hr>
+              <img src="a2.png" ><b>    <u>20 documents :</u></b><br><br>La session se concentre sur le développement des compétences entrepreneuriales et de gestion de projet. <br><br> <br><hr>
+              <img src="a3.png" ><b>    <u>Public cible :</u></b><br><br>Pour les étudiants qui recherchent une compréhension pratique des concepts de base de l'entrepreneuriat et de la gestion de projet.<br><br> <br><hr>
+              <img src="a4.png" ><b>    <u>Méthode d'enseignement : </u></b><br><br> La session comprend des présentations, des discussions interactives et des études de cas réels pour améliorer la compréhension et l'application des compétences dans des scénarios réels.<br><br> <br><hr>
+          <br><br>  </div>
+
+            <div class="col-12 col-md-7"><span><a href="seance2.html"><img src="a7.png" class="a6"><br> <img src="a5.png" class="a5"></a></span> </div>
+            
+        </div>
+        <footer><div class="foter">@site créé par Amina Tourrisse</div></footer>
+            
+            
+    </div>
+    
+
+  <style>
+    #videoDescription{
+        color:#5b5b5e; position: absolute;top: 94.2%;
+    }
+    .col-md-7{
+        width: 70%;
+       margin: auto;
+       padding-left: 20px;
+    }
+.foter{
+    width: 100%;
+    background: rgba(230, 230, 230, 0.562);
+    color: #212322;
+    text-decoration: underline;
+    padding-top: 35px;
+    font-size: 25px;
+    margin-top: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+    top: 10px;
+}
+    
+        *{
+            margin: 0px;
+            padding: 0px;
+           
+            }
+           
+
+
+            hr{
+                background-color: #696355;
+            }
+b{
+    font-size: x-large;
+    
+}
+
+
+    .container{
+        
+        width: 100%;
+        background-color: #f6f7fb;
+        position: absolute;
+        top: 106%;
+       
+    }
+    .row{
+        display: flex;
+    }
+    .col-md-5{
+        
+        margin-top: 30px;
+        width: 30%;
+        padding-top: 50px;
+       
+    color: #696355;
+    }
+        button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+        }
+
+        #videoTitle{
+            margin-top: 10px;
+            color: #377201;
+            text-align: center;
+        }
+        #newVideo {
+            position:absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 87%;
+            object-fit: contain;
+            outline: none;
+          
+            background-color: black;
+        }
+        .a6{
+            margin-top: 50px;
+            border-radius: 0%;
+            height: 670px;
+            width: 100%;
+            display: inline-block;
+            
+           
+   
+    background-color:white ; /* خلفية لضمان ظهور التأثير */
+    box-shadow:  1px 3px 20px 2px black; 
+    border: white 20px;
+    margin-bottom: 20px;
+
+
+
+}
+
+            
+        
+        .a5{
+            margin-top: 10px;
+            width: 200px;
+            height: 50px;
+            border-radius: 0%;
+           
+        }
+        span{
+            background-color: #f6f7fb;
+            display: block;
+            text-align: center;
+        }
+        p{
+
+            margin-top: 0px;
+            position: absolute;
+            top: 96.7%;
+        }
+       
+        img{
+            border-radius: 50%; width: 40px;height: 40px;
+            position: relative;
+            top: 10px;
+            
+        }
+        #Title{
+            color: #377201;position: absolute; top: 100.7%;width: 100%;text-align: center;
+        }
+        @media (max-width: 600px) {
+    p {
+        font-size: 13.5px;
+    }
+    #videoTitle{
+        
+        margin-left: 10px;
+           font-size:x-large;
+            text-align:left;
+           
+        }
+        #Title{
+           margin-top: 20px;
+            font-size:x-large;
+            text-align:left;
+        }
+        .a6{
+          
+            border-radius: 0%;
+            height: 407px;
+            width: 100%;
+            box-shadow: inset;
+            
+        }
+        .row{
+            display: block;
+        }
+        .col-md-5{
+            width: 100%;
+        }
+        #videoDescription{
+        color:#5b5b5e; position: absolute;top: 95.7%;
+    }
+    .container{
+        
+        width: 100%;
+        background-color: #f6f7fb;
+        position: absolute;
+        top: 110%;
+        
+}
+#videoDescription{
+        color:#5b5b5e; position: absolute;top: 94.4%;
+    }
+        }
+        
+    </style>
+
+    <script>
+       
+      
+        window.onload = function() {
+    // إذا كانت هناك صفحة فيديو مفتوحة مسبقًا، أغلقها
+    if (localStorage.getItem("videoPlayerOpen")) {
+        let previousWindow = window.open("", "videoPlayerWindow");
+        if (previousWindow) {
+            previousWindow.close(); // إغلاق الصفحة السابقة
+        }
+    }
+
+    // تسجيل الصفحة الجديدة في `localStorage`
+    localStorage.setItem("videoPlayerOpen", "true");
+    window.name = "videoPlayerWindow"; // تحديد اسم النافذة الجديدة
+};
+
+// عند انتهاء الفيديو، إغلاق الصفحة
+document.getElementById("newVideo").addEventListener("ended", function() {
+    window.close();
+    localStorage.removeItem("videoPlayerOpen"); // إزالة حالة الصفحة المفتوحة
+});
+
+// عند إغلاق الصفحة، إزالة الحالة
+window.addEventListener("beforeunload", function() {
+    localStorage.removeItem("videoPlayerOpen");
+});
+
+
+//
+
+    </script>
+
+
+</body>
+</html>
